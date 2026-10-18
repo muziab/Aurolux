@@ -10,31 +10,31 @@ export default function HomePage({ showcase }) {
   let catDetails = [
     {
       id: new Date(),
-      src: "/public/img/995506693224450395.png",
+      src: "/images/995506693224450395.png",
       category: "Shoes",
       amount: "45,000+ items",
     },
     {
       id: new Date(),
-      src: "/public/img/headset1.png",
+      src: "/images/headset1.png",
       category: "Gadget",
       amount: "2,000+ items ",
     },
     {
       id: new Date(),
-      src: "/public/img/Toobaa is a designer, manufacturer and online….png",
+      src: "/images/Toobaa is a designer, manufacturer and online….png",
       category: "Jalab",
       amount: "43,000 items",
     },
     {
       id: new Date(),
-      src: "/public/img/jeans4.png",
+      src: "/images/jeans4.png",
       category: "Jeans",
       amount: "2,000 items",
     },
     {
       id: new Date(),
-      src: "/public/img/SHEIN.png",
+      src: "/images/SHEIN.png",
       category: "Japanese",
       amount: "14,235 items",
     },

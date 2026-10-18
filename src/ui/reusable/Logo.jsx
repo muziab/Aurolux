@@ -1,6 +1,5 @@
 import React from "react";
-import logo from "/images/Shop_items/noBgImg/Alux.png";
-// import logo from "../../../public/images/Shop_items/Alux.png"
+import logo from "/images/Shop_items_noBgImg_Alux.png";
 
 const Logo = () => {
   return (

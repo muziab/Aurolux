@@ -1,9 +1,9 @@
 // src/components/Carousel.jsx
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import mountain from "../../public/images/Shop_items/jeans.jpg";
-import mountain2 from "../../public/images/Shop_items/logan-weaver-lgnwvr-BCWaY_rNe6M-unsplash.jpg";
-import mountain3 from "../../public/images/Shop_items/Picture1.png";
+const mountain = "/images/jeans.jpg";
+const mountain2 = "/images/logan-weaver-lgnwvr-BCWaY_rNe6M-unsplash.jpg";
+const mountain3 = "/images/Picture1.png";
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 

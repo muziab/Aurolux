@@ -1,13 +1,13 @@
 import React from "react";
-// import productImg from "../../../public/images/Shop_items/men wears/Comlete_brown.jpg";
 // import { div } from "framer-motion/client";
 // let style = { width: "100%", height: "100%" };
 const ProductImage = ({ imageSource }) => {
   return (
     <div
-      style={{overflow: "hidden", objectFit: "contain" }}
+      style={{overflow: "hidden" }}
+      className="h-50 "
     >
-      <img src={imageSource} style={{ height: "100%" }} className={`aspect-6/9`} />
+      <img src={imageSource} className={`h-65 aspect-6/7`} />
     </div>
   );
 };

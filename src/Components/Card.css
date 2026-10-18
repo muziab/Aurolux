@@ -328,5 +328,5 @@
     @apply bg-yellow-500,
     var(--color-gold-deep)
   ); */
-  @apply px-3 py-2 rounded-[5px] w-full text-[13px] font-light w-fit bg-yellow-600;
+  @apply px-3 py-2 rounded-[5px] w-full text-[13px] font-light bg-yellow-600;
 }

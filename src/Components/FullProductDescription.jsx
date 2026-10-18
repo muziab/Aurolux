@@ -18,7 +18,7 @@ export default function FullProductDescription({
     <>
       {collapse &&
         product.map((item) => (
-          <main className="fixed z-30 min-h-80 h-[95vh] overflow-auto self-center bottom-0 inset-0 p-10 justify-self-center rounded-lg flex gap-4 w-[70vw] backdrop-blur-2xl backdrop-brightness-50 bg-[#1c1c1cab] items-center justify-center CustomScrollBar">
+          <main className="max-lg: fixed z-30 min-h-80 h-[95vh] overflow-auto self-center bottom-0 inset-0 p-10 justify-self-center rounded-lg flex gap-4 w-[70vw] backdrop-blur-2xl backdrop-brightness-50 bg-[#1c1c1cab] items-center justify-center CustomScrollBar">
             <div className="w-20 flex flex-col gap-2 p-2">
               <img
                 className="border border-yellow-800 rounded-sm"

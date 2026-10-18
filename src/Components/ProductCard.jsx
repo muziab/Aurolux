@@ -54,7 +54,7 @@ const ProductCard = ({
             justifyContent: "space-evenly",
             
           }}
-          className="max-sm:h-37.5 justify-evenly h-54 w-55 flex-col"
+          className="h-30 w-55 flex-col text-xs"
         >
           <ProductDescription desc={description} />
           <Rating />

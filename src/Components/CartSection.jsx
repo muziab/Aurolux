@@ -13,7 +13,7 @@ function CartSection({ onRemoveCartItem, products, toggleCollapse, collapse }) {
   return (
     <>
       <div
-        className={` ${collapse == false ? "w-0" : "w-60"}  overflow-auto flex flex-col gap-5 items-center text-neutral-50  min-w-fit h-screen bg-neutral-950 fixed top-0 right-0 z-25 CustomScrollBar`}
+        className={` ${collapse == false ? "w-0" : "w-80"}  overflow-auto flex flex-col gap-5 items-center text-neutral-50  min-w-fit h-screen bg-neutral-950 fixed top-0 right-0 z-25 CustomScrollBar`}
       >
         {collapse && (
           <>

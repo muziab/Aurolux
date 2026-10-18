@@ -46,11 +46,11 @@ export default function FilterSection() {
           {/* <br/> */}
           <Categories title={"BRANDS"} search={<SearchBar />} />
         </div>
-        <div className="text-white flex flex-col items-center max-lg:hidden justify-center mt-5 gap-3">
+        {/* <div className="text-white flex flex-col items-center max-lg:hidden justify-center mt-5 gap-3">
           <FaBagShopping className=" bg-neutral-800 text-2xl  rounded-sm h-4/6 w-4/6 sm:w-10 sm:h-10 p-2" />
           <CgGym className=" bg-neutral-800 text-2xl  rounded-sm h-4/6 w-4/6 sm:w-10 sm:h-10 p-2" />
           <GiDress className=" bg-neutral-800 text-2xl  rounded-sm h-4/6 w-4/6 sm:w-10 sm:h-10 p-2" />
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import "../../Components/Card.css"
 const UniversalBtn = ({actionDesc}) => {
   return (
     <>
-      <button className='actionBtn'>{actionDesc}</button>
+      <button className='max-sm:p-1 actionBtn'>{actionDesc}</button>
     </>
   )
 }
