@@ -10,6 +10,8 @@ import { Route, Routes } from "react-router-dom";
 import WishListPage from "./Pages/WishListPage";
 import HomePage from "./Pages/HomePage";
 import FullProductDescription from "./Components/FullProductDescription";
+import MyCarousel from "./Components/MyCarousel";
+import NotFoundPage from "./Components/NotFoundPage";
 
 const App = () => {
   const [collapse, SetCollapse] = useState(false);
@@ -35,17 +37,17 @@ const App = () => {
     );
     console.log(id);
     console.log(wishlist.map((item) => item.id) == id);
-    alert("Added 1 Product To Wishlist")
+    alert("Added 1 Product To Wishlist");
     console.log(wishlist);
   }
   function SubtractWishlist(id) {
-    alert("Removed 1 Product from Wishlist")
+    alert("Removed 1 Product from Wishlist");
     SetWishlist(wishlist.filter((item) => item.id !== id));
     // console.log(e.target);
   }
   // let idd
   function AddToCart(id) {
-    alert("Added 1 Product To Cart")
+    alert("Added 1 Product To Cart");
     SetCarted(
       [...carted].concat(itemsApi.filter((product) => product.id == id)),
     );
@@ -61,7 +63,7 @@ const App = () => {
   function toggleCollapse() {
     SetCollapse(!collapse);
   }
-  
+
   return (
     <div className="" style={{ backgroundColor: "black" }}>
       <Header
@@ -100,12 +102,15 @@ const App = () => {
           element={
             <HomePage showcase={itemsApi.filter((m) => m.id.endsWith("-1"))} />
           }
-          />
+        />
+        {/* <Route path="/" element={<MyCarousel />} /> */}
+        <Route path="*" element={<NotFoundPage />} 
+        />
       </Routes>
 
       <FullProductDescription
-          onAddWish={toggleAddToWishlist}
-      onAddToCart={AddToCart}
+        onAddWish={toggleAddToWishlist}
+        onAddToCart={AddToCart}
         toggleCollapse={() => handleShowProduct()}
         collapse={productCollapse}
         product={describedProduct}

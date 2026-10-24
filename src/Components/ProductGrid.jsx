@@ -13,7 +13,7 @@ const ProductGrid = ({
   // let re = menuList.map((pr) => pr.img)
 
   return (
-    <section className="productGrid max-sm:grid max-sm:grid-cols-2" style={additonalStyle}>
+    <section className="flex flex-wrap w-fit p-3.5 gap-y-5 gap-x-4 max-sm:grid max-sm:grid-cols-2" style={additonalStyle}>
       {/* {menuList.map((bg) => console.log(bg.category.length))} */}
       {productsData.map((productInfo) => (
         <ProductCard

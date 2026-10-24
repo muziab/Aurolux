@@ -19,15 +19,15 @@ export default function Marketplace({
         <div className="w-full">
           <PageTitle title={"Marketplace"} />
           <Carousel />
-          <ProductGrid
-            handleAddWish={(id) => handleAddWish(id)}
-            idd={idd}
-            productsData={productsData}
-            onproductCollapse={(id) => onproductCollapse(id)}
-            // handleCartedItems={() => handleCartedItems}
-            handleCartedItems={(id) => handleCartedItems(id)}
-            handleRemoveWish={(id) => handleRemoveWish(id)}
-          />
+            <ProductGrid
+              handleAddWish={(id) => handleAddWish(id)}
+              idd={idd}
+              productsData={productsData}
+              onproductCollapse={(id) => onproductCollapse(id)}
+              // handleCartedItems={() => handleCartedItems}
+              handleCartedItems={(id) => handleCartedItems(id)}
+              handleRemoveWish={(id) => handleRemoveWish(id)}
+            />
         </div>
       </div>
     </>

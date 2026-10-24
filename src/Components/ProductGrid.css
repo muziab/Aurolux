@@ -1,8 +1,10 @@
 .productGrid {
-  display: flex;
+  /* display: flex; */
+  /* justify-content: center; */
   /* justify-self: center; */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap;
+  width:fit-content;
   gap: 15px;
   row-gap: 22px;
-  align-items: center;
+  align-items: center; */
 }

@@ -32,7 +32,7 @@ const ProductCard = ({
   }
   // let wish = true
   return (
-    <div className="ProductCard w-55 max-sm:w-40 ">
+    <div className="ProductCard w-45 max-sm:w-40 ">
         <div className="wish">
           <Wishlist
             allowClick={true}

@@ -238,7 +238,7 @@
   /* width: 100%; */
   background: #111111;
   border: 1px solid rgba(212, 175, 55, 0.12);
-  border-radius: 18px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   transition:
@@ -328,5 +328,5 @@
     @apply bg-yellow-500,
     var(--color-gold-deep)
   ); */
-  @apply px-3 py-2 rounded-[5px] w-full text-[13px] font-light bg-yellow-600;
+  @apply px-2 py-2 rounded-[5px] w-full text-[12px] font-light bg-yellow-600;
 }

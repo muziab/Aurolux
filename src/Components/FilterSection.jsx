@@ -28,7 +28,7 @@ export default function FilterSection() {
   return (
     <>
       <div
-        className={`${collapse == true ? " w-20 max-lg:h-fit flex flex-col max-lg:w-10  items-center py-2 " : "w-80 py-6 px-4 "} z-40  max-lg:fixed  text-[13.5px] flex flex-col gap-4 sticky bg-[#0d0d0d] rounded-sm text-neutral-300 h-screen left-0 top-0 CustomScrollBar`}
+        className={`${collapse == true ? " w-20 max-lg:h-fit flex flex-col max-lg:w-10  items-center py-2 " : "w-80 py-6 px-4 "} z-5  max-lg:fixed  text-[13.5px] flex flex-col gap-4 sticky bg-[#0d0d0d] rounded-sm text-neutral-300 h-screen left-0 top-0 CustomScrollBar`}
       >
         <div className={`text-2xl`}>
           {!collapse && <FaTimes onClick={toggleCollapse} />}
