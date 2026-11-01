@@ -5,7 +5,11 @@ import { FaFoursquare } from "react-icons/fa";
 import { BiCategory } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import PrimaryBtn from "../ui/reusable/PrimaryBtn";
+import MyCarousel from "../Components/MyCarousel";
+import ProductImage from "../ui/reusable/ProductImage";
+import data from "../ui/items.json";
 
+let test = data.filter((item) => item.id.endsWith("-1"));
 export default function HomePage({ showcase }) {
   let catDetails = [
     {
@@ -39,10 +43,13 @@ export default function HomePage({ showcase }) {
       amount: "14,235 items",
     },
   ];
+  // .map((item) => <ProductImage imageSource={item.img} />);
+  console.log(test);
   return (
     <section className="min-h-screen">
-      <EditedCarousel />
-      <section className="h-100 flex items-center justify-center flex-col gap-5">
+      {/* <EditedCarousel /> */}
+      <MyCarousel />
+      <section className="h-150 flex overflow-hidden items-center justify-evenly flex-col ">
         <div>
           <h1
             className="text-white text-2xl font-bold"
@@ -51,46 +58,10 @@ export default function HomePage({ showcase }) {
             CATEGORIES
           </h1>
         </div>
-        <div className="flex justify-center p-4 gap-5 w-full overflow-hidden items-center">
-          <div className="carouse  flex w-screen gap-10">
-            {catDetails.map((cat) => (
-              <div className="text-white flex flex-col items-center justify-center leading-tight">
-                <div className="bg-neutral-900 h-23 p-2 object-contain flex justify-center items-center w-23 mb-2 rounded-full">
-                  <img src={cat.src} alt="" className="h-full" />
-                </div>
-                <b className="text-[14px]  text-nowrap max-sm:text-[12px]">
-                  {cat.category}
-                </b>
-                <p className="text-neutral-600 text-xs">{cat.amount}</p>
-              </div>
-            ))}
-          </div>
-          <div className="carouse  flex w-[95vw] gap-5">
-            {catDetails.map((cat) => (
-              <div className="text-white flex flex-col items-center justify-center leading-tight">
-                <div className="bg-neutral-900 h-23 p-2 object-contain flex justify-center items-center w-23 mb-2 rounded-full">
-                  <img src={cat.src} alt="" className="h-full" />
-                </div>
-                <b className="text-[14px]  text-nowrap max-sm:text-[12px]">
-                  {cat.category}
-                </b>
-                <p className="text-neutral-600 text-xs">{cat.amount}</p>
-              </div>
-            ))}
-          </div>
-          <div className="carouse  flex w-screen gap-5">
-            {catDetails.map((cat) => (
-              <div className="text-white flex flex-col items-center justify-center leading-tight">
-                <div className="bg-neutral-900 h-23 p-2 object-contain flex justify-center items-center w-23 mb-2 rounded-full">
-                  <img src={cat.src} alt="" className="h-full" />
-                </div>
-                <b className="text-[14px]  text-nowrap max-sm:text-[12px]">
-                  {cat.category}
-                </b>
-                <p className="text-neutral-600 text-xs">{cat.amount}</p>
-              </div>
-            ))}
-          </div>
+        <div className="flex gap-3 ">
+          {test.map((item) => (
+            <CatCard key={item.id} item={item} />
+          ))}
         </div>
       </section>
       <div className="flex flex-col py-4">
@@ -142,5 +113,20 @@ export default function HomePage({ showcase }) {
         </Link>
       </div>
     </section>
+  );
+}
+export function CatCard({ item }) {
+  return (
+    <div className="h-75 cat hover:translate-0 relative overflow-hidden aspect-3/4">
+      <ProductImage
+        imageSource={item.img}
+        additionalStyle={"h-full aspect-3/4"}
+      />
+      <div
+        className="absolute h-full w-full inset-0 "
+        style={{ backgroundImage: "linear-gradient(to top, black, transparent)" }}
+      ></div>
+      <b className="text-white font-light absolute bottom-5 left-5">{item.category}</b>
+    </div>
   );
 }

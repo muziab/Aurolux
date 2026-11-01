@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa";
 import UniversalBtn from "../ui/reusable/UniversalBtn";
 import PrimaryBtn from "../ui/reusable/PrimaryBtn";
 import Wishlist from "../ui/reusable/Wishlist";
+import { Link } from "react-router-dom";
 
 export default function FullProductDescription({
   product,
@@ -18,22 +19,22 @@ export default function FullProductDescription({
     <>
       {collapse &&
         product.map((item) => (
-          <main className="fixed z-30 min-h-80 h-[95vh] overflow-auto self-center bottom-0 inset-0 p-10 justify-self-center rounded-lg flex gap-4 w-[64vw] backdrop-blur-2xl backdrop-brightness-50 bg-[#1c1c1cab] items-center justify-center CustomScrollBar">
-            <div className="w-20 flex flex-col gap-2 p-2">
+          <main className="fixed max-sm:flex-col z-30 h-130 max-sm:w-90 max-sm:h-130 overflow-hidden self-center bottom-0 inset-0 p-5 justify-self-center rounded-lg flex gap-4 w-260 backdrop-blur-2xl backdrop-brightness-50 bg-[#1c1c1cab] items-center justify-center ">
+            <div className="w-20 flex h-40 place-content-center flex-col gap-2 p-2">
               <img
-                className="border border-yellow-800 rounded-sm"
+                className="border object-contain border-yellow-800 rounded-sm"
                 src={item.img}
                 alt=""
               />
             </div>
-            <div>
+            <div className="max-w-130 place-content-center">
               <img
-                className="border h-[85vh] border-yellow-600 rounded-[10px]"
+                className="border max-sm:h-50 h-100 border-yellow-600 rounded-[10px]"
                 src={item.img}
                 alt=""
               />
             </div>
-            <div className="text-neutral-400 p-4 flex flex-col gap-5 w-100">
+            <div className="CustomScrollBar p-2 text-neutral-400 h-100 flex flex-col gap-5 max-sm:w-[90%] max-sm:text-[10px] w-100">
               <div className="flex flex-col gap-3">
                 <div className="text-white flex gap-2 items-center">
                   <small
@@ -58,7 +59,7 @@ export default function FullProductDescription({
                     ( 210,Reviews )<div>2,435 Sold</div>
                   </div>
                 </div>
-                <ul className="leading-10">
+                <ul className="leading-10 max-sm:leading-5">
                   <li>Brand: Rolex</li>
                   <li>Model: Submariner Date</li>
                   <li>Reference: 1256349.N</li>
@@ -66,22 +67,22 @@ export default function FullProductDescription({
                   <li>Water Resistance: 300m/100ft</li>
                 </ul>
                 <small>Movemart Automatic</small>
-                <a href="#" className="leading-8 w-fit text-lg text-yellow-500">
+                <a href="#" className="leading-2 w-fit text-lg text-yellow-500">
                   View Full Specification
                 </a>
               </div>
               <h1 className="text-xl">
-                <span className="text-3xl text-yellow-500">
+                <span className="text-3xl max-sm:text-xl text-yellow-500">
                   {item.price || "N5,550,000"}
                 </span>{" "}
                 <strike>{item.org_price}</strike>{" "}
                 <small>{item.Discount || "-10%"}</small>
               </h1>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2 ">
                 <div onClick={() => onAddToCart(item.id)}>
                   <UniversalBtn actionDesc={"Add To Cart"} />
                 </div>
-                <PrimaryBtn FunctionDesc={"Buy Now"} />
+                <Link to={"/checkout"} className="w-full " onClick={() => onAddToCart(item.id)}><PrimaryBtn FunctionDesc={"Buy Now"} additionalStyle={"w-full"}/></Link>
                 <div className="flex items-center justify-between">
                   {/* <div className="flex border px-2 py-4 items-center"> Add To Wishlist</div> */}
                   <PrimaryBtn
@@ -101,7 +102,7 @@ export default function FullProductDescription({
         ))}
       <div
         className={` ${!collapse ? "h-0 hidden" : "h-screen block"} w-screen  bg-neutral-800 fixed top-0 right-0 z-20 text-white `}
-        style={{ backgroundColor: "#0c0c0cab" }}
+        style={{ backgroundColor: "#0c0c0cf2" }}
         onClick={toggleCollapse}
       ></div>
     </>

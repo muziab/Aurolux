@@ -1,11 +1,13 @@
-import React from 'react'
-import "../../Components/Card.css"
-const UniversalBtn = ({actionDesc}) => {
+import React from "react";
+import "../../Components/Card.css";
+const UniversalBtn = ({ additionalStyle, actionDesc }) => {
   return (
     <>
-      <button className='max-sm:p-1  actionBtn'>{actionDesc}</button>
+      <button className={`${additionalStyle || `max-sm:p-1 font-bold actionBtn`} actionBtn`}>
+        {actionDesc}
+      </button>
     </>
-  )
-}
+  );
+};
 
-export default UniversalBtn
+export default UniversalBtn;

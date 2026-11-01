@@ -16,7 +16,7 @@ import Categories from "../ui/reusable/Category";
 import { Link, Route, Routes } from "react-router-dom";
 import ChevronDown from "../ui/reusable/ChevronDown";
 
-export default function heaeder({
+export default function Header({
   wishes,
   handleWish,
   handleCartedItems,
@@ -29,7 +29,7 @@ export default function heaeder({
   }
   return (
     <header
-      className="h-fit p-4 gap-y-4 flex items-center border max-xl:flex-col max-w-screen justify-evenly"
+      className="h-fit sticky top-0 z-40 p-4 gap-y-4 flex items-center border max-xl:flex-col max-w-screen justify-evenly bg-black"
       // style={{ border: "0.5px thin var(--color-gold-deep)" }}
     >
       <div className="flex items-center w-full gap-2 justify-evenly">

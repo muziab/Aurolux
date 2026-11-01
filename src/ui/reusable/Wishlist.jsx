@@ -11,7 +11,7 @@ const Wishlist = ({ handleAddWish, allowClick, wish, handleRemoveWish }) => {
   }
   return (
     <div
-      className="font-bold cursor-pointer text-2xl"
+      className="font-bold cursor-pointer"
       onClick={handleWishlisted}
     >
       {!clicked ? (
